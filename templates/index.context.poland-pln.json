@@ -1,0 +1,24 @@
+{
+  "parent": "index.json",
+  "context": {
+    "market": "poland-pln"
+  },
+  "sections": {
+    "35054989-9c03-43b3-9e79-77718d46a03a": {
+      "settings": {
+      },
+      "blocks": {
+        "template--21149516529980__35054989-9c03-43b3-9e79-77718d46a03a-video-1": {
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/IMG_8633.MOV"
+          }
+        },
+        "e4432e8f-874d-48d5-b24b-c6753385aa96": {
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Copy_of_IMG_7922_63f46abe-2363-4f63-844b-fbf2e9d68f6c.jpg"
+          }
+        }
+      }
+    }
+  }
+}

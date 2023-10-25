@@ -1,0 +1,52 @@
+<div class="menu-collection-containers page-width">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {% when 'collection' %}
+      <a href="{{ page.url }}#{% if block.settings.heading == blank %}{{ block.settings.collection.title }}{% else %}{{ block.settings.heading }}{% endif %}">
+        <h2 class="menu-element-collection">
+          {% if block.settings.heading == blank %}{{ block.settings.collection.title }}{% else %}{{ block.settings.heading }}{% endif %}<sup>{{ block.settings.collection.products_count }}</sup>
+        </h2>
+      </a>
+    {%- endcase -%}
+  {%- endfor -%}
+</div>                 
+
+{% schema %}
+{
+  "name": "Menu List Collection",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "t:sections.collection-list.blocks.featured_collection.name",
+      "settings": [
+        {
+          "type": "html",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Menu List Collection",
+      "blocks": [
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+
+{% endschema %}

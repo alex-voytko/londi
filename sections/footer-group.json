@@ -1,0 +1,63 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "88a74e2e-be03-4c82-aee6-36bb5ac61cac": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p><a href=\"https:\/\/www.instagram.com\/londi.brand\/\" title=\"https:\/\/www.instagram.com\/londi.brand\/\">@LONDI<\/a><\/p>"
+          }
+        },
+        "8715cbfb-1b77-4880-ad23-9f122419eab5": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer"
+          }
+        },
+        "a4ae2f6b-3ede-4366-b701-fc671aaaa87b": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer-menu-2"
+          }
+        },
+        "eec37f7a-2704-41b4-a637-11b0c67f98cf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo_powered_by_1.png",
+            "image_width": 185,
+            "alignment": "right"
+          }
+        }
+      },
+      "block_order": [
+        "88a74e2e-be03-4c82-aee6-36bb5ac61cac",
+        "8715cbfb-1b77-4880-ad23-9f122419eab5",
+        "a4ae2f6b-3ede-4366-b701-fc671aaaa87b",
+        "eec37f7a-2704-41b4-a637-11b0c67f98cf"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 48,
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

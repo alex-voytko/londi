@@ -1,0 +1,232 @@
+{{ 'video-section.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ block.settings.padding_top }}px;
+      padding-bottom: {{ block.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign video_id = block.settings.video.id | default: block.settings.video_url.id
+  assign video_alt = block.settings.video.alt | default: block.settings.description
+  assign alt = 'sections.video.load_video' | t: description: video_alt | escape
+  assign poster = block.settings.video.preview_image | default: block.settings.cover_image
+
+  if block.settings.video != null
+    assign ratio_diff = block.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
+    if ratio_diff < 0.01 and ratio_diff > 0
+      assign fix_ratio = true
+    endif
+  endif
+-%}
+
+{%- capture sizes -%}
+  {% if block.settings.full_width -%}
+    100vw
+  {%- else -%}
+    (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px)
+    calc(100vw - 10rem), 100vw
+  {%- endif %}
+{%- endcapture -%}
+
+<div class="fullscreen-video-scroll {% if block.settings.video_mobile != blank %}video-desktop{% endif %}">
+  <div class="video-section isolate{% unless block.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
+    <noscript>
+      <div
+        class="video-section__media"
+        {% if poster != null %}
+          style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+        {% endif %}
+      >
+        {%- if block.settings.video == null and block.settings.video_url != null -%}
+          <a
+            href="{{ block.settings.video_url }}"
+            class="video-section__poster media media--transparent{% if poster == null %} video-section__placeholder{% endif %}"
+          >
+            {%- if poster != null -%}
+              {{
+                poster
+                | image_url: width: 3840
+                | image_tag:
+                  loading: 'lazy',
+                  sizes: sizes,
+                  autoplay: true,
+                  widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                  alt: alt
+              }}
+            {%- else -%}
+              {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+            {%- endif -%}
+          </a>
+        {%- else -%}
+          {{
+            block.settings.video
+            | video_tag: image_size: '1100x', loop: block.settings.enable_video_looping, controls: true, muted: false,
+            autoplay: true
+          }}
+        {%- endif -%}
+      </div>
+    </noscript>
+    <deferred-media
+      class="video-section__media deferred-media no-js-hidden gradient global-media-settings{% if block.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      data-media-id="{{ video_id }}"
+      {% if poster != null %}
+        style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+      {% endif %}
+    >
+      <button
+      style="display: none;"
+        id="Deferred-Poster-Modal-{{ video_id }}"
+        class="video-section__poster media deferred-media__poster media--landscape"
+        type="button"
+        aria-label="{{ alt }}"
+      >
+        {%- if poster != null -%}
+          {{
+            poster
+            | image_url: width: 3840
+            | image_tag: loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+          }}
+        {%- else -%}
+          {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+        {%- endif -%}
+        <span class="deferred-media__poster-button motion-reduce">
+          {%- render 'icon-play' -%}
+        </span>
+      </button>
+      <template>
+        {{
+          block.settings.video
+          | video_tag:
+            autoplay: true,
+            controls: false,
+            muted: true,
+            loop:true
+        }}
+    </template>
+    </deferred-media>
+  </div>
+</div>
+
+<!-- Mobile video -->
+{% if block.settings.video_mobile != blank %}
+  {% assign video_id = block.settings.video_mobile.id | default: block.settings.video_url.id %}
+  {% assign video_alt = block.settings.video_mobile.alt | default: block.settings.description %}
+  {% assign alt = 'sections.video.load_video' | t: description: video_alt | escape %}
+  {% assign poster = block.settings.video_mobile.preview_image | default: block.settings.cover_image %}
+
+  {% if block.settings.video_mobile != null %}
+    {% assign ratio_diff = block.settings.video_mobile.aspect_ratio | minus: poster.aspect_ratio | abs %}
+    {% if ratio_diff < 0.01 and ratio_diff > 0 %}
+      {% assign fix_ratio = true %}
+    {% endif %}
+  {% endif %}
+
+  <div class="fullscreen-video-scroll video-mobile" style="display: none;">
+    <div class="video-section isolate{% unless block.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
+      <noscript>
+        <div
+          class="video-section__media"
+          {% if poster != null %}
+            style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+          {% endif %}
+        >
+          {%- if block.settings.video_mobile == null and block.settings.video_url != null -%}
+            <a
+              href="{{ block.settings.video_url }}"
+              class="video-section__poster media media--transparent{% if poster == null %} video-section__placeholder{% endif %}"
+            >
+              {%- if poster != null -%}
+                {{
+                  poster
+                  | image_url: width: 3840
+                  | image_tag:
+                    loading: 'lazy',
+                    sizes: sizes,
+                    autoplay: true,
+                    widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                    alt: alt
+                }}
+              {%- else -%}
+                {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+              {%- endif -%}
+            </a>
+          {%- else -%}
+            {{
+              block.settings.video_mobile
+              | video_tag: image_size: '1100x', loop: block.settings.enable_video_looping, controls: true, muted: false,
+              autoplay: true
+            }}
+          {%- endif -%}
+        </div>
+      </noscript>
+      <deferred-media
+        class="video-section__media deferred-media no-js-hidden gradient global-media-settings{% if block.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        data-media-id="{{ video_id }}"
+        {% if poster != null %}
+          style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+        {% endif %}
+      >
+        <button
+        style="display: none;"
+          id="Deferred-Poster-Modal-{{ video_id }}"
+          class="video-section__poster media deferred-media__poster media--landscape"
+          type="button"
+          aria-label="{{ alt }}"
+        >
+          {%- if poster != null -%}
+            {{
+              poster
+              | image_url: width: 3840
+              | image_tag: loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+            }}
+          {%- else -%}
+            {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+          {%- endif -%}
+          <span class="deferred-media__poster-button motion-reduce">
+            {%- render 'icon-play' -%}
+          </span>
+        </button>
+        <template>
+          {{
+            block.settings.video_mobile
+            | video_tag:
+              autoplay: true,
+              controls: false,
+              muted: true,
+              loop:true
+          }}
+      </template>
+      </deferred-media>
+    </div>
+  </div>
+{% endif %}
+<script>
+//      window.addEventListener("load", function (event) {
+//       document.querySelector('.video-section__poster').click()
+//   });
+</script>
+<style>
+    .fullscreen-video-scroll video{
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+    }
+    @media screen and (max-width: 749px) {
+      .fullscreen-video-scroll.video-desktop {
+        display: none !important
+      }
+      .fullscreen-video-scroll.video-mobile {
+        display: block !important;
+      }
+    }
+</style>

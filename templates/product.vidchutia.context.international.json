@@ -1,0 +1,24 @@
+{
+  "parent": "product.vidchutia.json",
+  "context": {
+    "market": "international"
+  },
+  "sections": {
+    "main": {
+      "settings": {
+      },
+      "blocks": {
+        "d2cfcc5b-af46-4656-86f1-4bd4af78fb88": {
+          "settings": {
+            "content": "<p>{{ product.metafields.custom.features | metafield_tag }}<\/p>"
+          }
+        },
+        "24a9750e-ee25-4965-9a47-0289f931d387": {
+          "settings": {
+            "content": "<p>{{ product.metafields.custom.return | metafield_tag }}<\/p>"
+          }
+        }
+      }
+    }
+  }
+}

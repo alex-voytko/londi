@@ -1,0 +1,25 @@
+{
+  "parent": "product.json",
+  "context": {
+    "market": "international"
+  },
+  "sections": {
+    "main": {
+      "disabled": false,
+      "settings": {
+      },
+      "blocks": {
+        "3a0f20ce-0923-42bd-b4e1-d40ed5cf284d": {
+          "settings": {
+            "content": "<p>{{ product.metafields.custom.features | metafield_tag }}<\/p>"
+          }
+        },
+        "05f4b148-444d-49ba-a25e-dd3d37926ba8": {
+          "settings": {
+            "content": "<p>{{ product.metafields.custom.return | metafield_tag }}<\/p>"
+          }
+        }
+      }
+    }
+  }
+}

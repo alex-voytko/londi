@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-search",
+      "settings": {
+        "columns_desktop": 4,
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "article_show_date": true,
+        "article_show_author": true,
+        "columns_mobile": "2",
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "1f320022-47f2-4d10-a26a-fc113baa62b7": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<h1>Terms of Use<\/h1>\n\n<p>Privacy Policy of www.londi.com\n<\/br>This Website collects some Personal Data from its Users.<\/p>\n\n<p>This document can be printed for reference by using the print command in the settings of any browser.<\/p>\n\n<p>Owner and Data Controller<\/br>\nLOndi UNIPERSONALE, Via Francesco Luigi Ferrari, n. 37\/A, 44122 – Ferrara (FE)<\/p>\n\n<p>Owner contact email: help@londi.com<\/p>\n\n<p>Types of Data collected\nAmong the types of Personal Data that this Website collects, by itself or through third parties, there are: Cookies; Usage Data; geographic position; email address; first name; last name; various types of Data; gender; date of birth; phone number; address; username; password; company name; Tax ID; country; state; province; ZIP\/Postal code; city; unique device identifiers for advertising (Google Advertiser ID or IDFA, for example); billing address; shipping address; payment info; device information.<\/p>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1f320022-47f2-4d10-a26a-fc113baa62b7"
+  ]
+}

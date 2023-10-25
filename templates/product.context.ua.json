@@ -1,0 +1,25 @@
+{
+  "parent": "product.json",
+  "context": {
+    "market": "53f26497-59af-42b3-957a-bfd7d6cc5e02"
+  },
+  "sections": {
+    "main": {
+      "disabled": false,
+      "settings": {
+      },
+      "blocks": {
+        "05f4b148-444d-49ba-a25e-dd3d37926ba8": {
+          "settings": {
+            "content": "<p>{{ product.metafields.custom.return | metafield_tag }}<\/p>"
+          }
+        },
+        "418e65c2-88cd-4284-a14a-89268c7cabd9": {
+          "settings": {
+            "content": "<p>Our goal is conscious production, so we make products after receiving an order. Production takes 1-4 working days.<\/p><p>Shipping around Ukraine is carried out by Nova Poshta and takes 1-2 days.<\/p><p>International delivery is carried out by Nova Poshta Global or Ukrposhta. The delivery time depends on destination, approximately time is 14 days. For more information regarding delivery costs and terms please check Shipping&Returns page.<\/p>"
+          }
+        }
+      }
+    }
+  }
+}

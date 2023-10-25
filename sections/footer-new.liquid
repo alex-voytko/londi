@@ -1,0 +1,386 @@
+{% assign block_width = 'half' %}
+<footer class="footer footer__section">
+    <div class="footer__wrapper">
+        <div class="footer__content">
+            {% case section.blocks.size %}
+                {% when 3 %}
+                    {% assign block_width = 'third' %}
+                {% when 4 %}
+                    {% assign block_width = 'quarter' %}
+            {% endcase %}
+
+            {% for block in section.blocks %}
+                <div class="footer_item {{ block_width }} item-{{ block.type }}">
+                    {% case block.type %}
+                        {% when 'link_list' %}
+                            <div class="menu-wrapper">
+                                {% for link in block.settings.menu.links %}
+                                    <a class="menu_link" href="{{ link.url }}">{{ link.title }}</a>
+                                {% endfor %}
+                            </div>
+                        {% when 'text' %}
+                            {{ block.settings.text }}
+                        {% when 'image' %}
+                            <div class="image-wrapper image-{{ block.settings.position }} {% if block.settings.use_as_mobile_logo %}mobile-hidden{% endif %}">
+                                {% if block.settings.image != blank %}
+                                    <img src="{{ block.settings.image | img_url: 'master' }}" style="max-width: {{ block.settings.image_width }}px;" alt="{{ block.settings.image | escape }}">
+                                {% endif %}
+                            </div>
+                    {% endcase %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__toolbar">
+                {% if section.settings.show_copyright %}
+                    <div class="footer__copyright caption">
+                        <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}</small>
+                    </div>
+                {% endif %}
+                
+                {% if section.settings.show_locale_selector %}
+                    <div class="footer__locale_selector">
+
+                    </div>
+                {% endif %}
+            </div>
+            {%- if section.settings.show_payment_icons -%}
+                <div class="footer__payment_icons">
+                    <div class="footer__payment">
+                        <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+                        <ul class="list list-payment" role="list">
+                            {% assign hasPayments = false %}
+                            {%- for type in shop.enabled_payment_types -%}
+                                <li class="list-payment__item">
+                                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                                </li>
+                                {% assign hasPayments = true %}
+                            {%- endfor -%}
+
+                            {% unless hasPayments %}
+                                {% for i in (1..7) %}
+                                    <li class="list-payment__item">
+                                        {% render 'payment-icons', index: i %}
+                                    </li>
+                                {% endfor %}
+                            {% endunless %}
+                        </ul>
+                    </div>
+                </div>
+            {%- endif -%}
+            <div class="footer__mobile-logo mobile">
+                {% for block in section.blocks %}
+                    {% if block.type == 'image' %}
+                        {% if block.settings.use_as_mobile_logo %}
+                            <div class="image-wrapper">
+                                <img src="{{ block.settings.image | img_url:'master' }}" alt="{{ block.settings.image | escape }}">
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer.footer__section {
+        background-color: #FFF;
+        border-top: 1px solid #E7E7E7;
+    }
+    .footer__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .footer__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .footer_item, .footer_item p {
+        font-family: Helvetica;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: #060606;
+    }
+    .footer_item.half {
+        width: 50%;
+    }
+    .footer_item.third {
+        width: 33%;
+    }
+    .footer_item.quarter {
+        width: 25%;
+    }
+    .footer_item.item-text p {
+        margin: 0;
+    }
+    .footer_item.item-text p a {
+        color: #060606;
+        text-decoration: underline;
+        text-underline-offset: 1px;
+    }
+    .footer_item .menu-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .footer_item .menu-wrapper a {
+        color: #060606;
+        text-decoration: none;
+    }
+    .footer_item .image-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+    }
+    .footer_item .image-wrapper.image-left {
+        justify-content: flex-start;
+    }
+    .footer_item .image-wrapper.image-center {
+        justify-content: center;
+    }
+    .footer_item .image-wrapper.image-right {
+        justify-content: flex-end;
+    }
+    .footer__mobile-logo.mobile {
+        display: none;
+    }
+    .footer__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .footer__toolbar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .footer__toolbar .footer__copyright .copyright__content {
+        font-family: Helvetica;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: #060606;
+    }
+    .footer__locale_selector .locale-selectors__container {
+        margin: 0 !important;
+        padding: 0;
+        background-color: transparent !important;
+    }
+    .locale-selectors__content .locale-selectors__label {
+        font-family: Helvetica;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: #060606;
+    }
+    .locale-selectors__content .locale-selectors__selector {
+        background-color: #FFF !important;
+        max-width: 170px !important;
+        font-family: Helvetica;
+        font-size: 14px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px !important;
+        text-transform: uppercase;
+        color: #060606;
+    }
+    .footer__payment_icons .footer__payment .list-payment {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 6px;
+        margin: 0;
+        padding: 0;
+    }
+    .footer__payment_icons .footer__payment .list-payment .list-payment__item {
+        max-width: 42px;
+    }
+    .footer__payment_icons .footer__payment .list-payment .list-payment__item svg {
+        width: 100%;
+        height: auto;
+    }
+    .locale-selectors__content form {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 18px;
+    }
+    @media screen and (max-width: 749px) {
+        .footer__wrapper {
+            padding: 15px 15px 24px 15px;
+        }
+        .footer__content {
+            gap: 24px;
+        }
+        .footer_item, .footer_item p {
+            font-size: 12px;
+            line-height: 14px;
+        }
+        .footer_item {
+            width: 100% !important;
+        }
+        .footer_item.item-link_list {
+            width: calc(46% - 12px) !important;
+        }
+        html[lang="uk"] .footer_item.quarter.item-link_list:nth-of-type(3) {
+            width: calc(54% - 12px) !important;
+        }
+        .footer_item.item-image, .mobile-hidden {
+            display: none;
+        }
+        .footer__bottom {
+            margin-top: 24px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+        .footer__toolbar .footer__copyright .copyright__content {
+            font-size: 12px;
+            line-height: 14px;
+        }
+        .locale-selectors__content .locale-selectors__selector {
+            font-size: 12px !important;
+            line-height: 12px !important;
+            max-width: 110px !important;
+        }
+        .footer__payment_icons .footer__payment .list-payment .list-payment__item {
+            max-width: 30px !important;
+            max-height: 17px;
+        }
+        .footer__mobile-logo.mobile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .footer__mobile-logo.mobile .image-wrapper {
+            max-width: 160px;
+        }
+        .footer__mobile-logo.mobile .image-wrapper img {
+            width: 100%;
+        }
+        .locale-selectors__content form {
+            flex-direction: row !important;
+        }
+        .locale-selectors__content .locale-selectors__label {
+            margin: 0 !important;
+        }
+        .locale-selectors__content form {
+            height: 14px;
+        }
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Footer",
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.footer.blocks.text.name",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>@LONDI</p>",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 50,
+          "max": 550,
+          "step": 5,
+          "unit": "px",
+          "label": "Image width",
+          "default": 100
+        },
+        {
+          "type": "select",
+          "id": "position",
+          "label": "Image alignment on large screen",
+          "options": [
+            {
+              "value": "",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
+        },
+        {
+            "type": "checkbox",
+            "id": "use_as_mobile_logo",
+            "label": "Use as mobile logo image",
+            "info": "Would be shown as the lowest image of footer"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_copyright",
+      "default": true,
+      "label": "Show copyright text"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "default": true,
+      "label": "Show payment icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_locale_selector",
+      "default": true,
+      "label": "Show language/currency selector"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,141 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "f375deea-98ff-4990-a147-909ccd8be803": {
+      "type": "menu-list-collection",
+      "blocks": {
+        "8a094345-edad-4d3b-bbdc-959882ecae4c": {
+          "type": "collection",
+          "settings": {
+            "heading": "underwear",
+            "collection": "underwear"
+          }
+        },
+        "21c057d7-deb0-4836-9512-4be297adcc27": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "heading": "glasses",
+            "collection": "glasses"
+          }
+        },
+        "template--18462990663996__f375deea-98ff-4990-a147-909ccd8be803-1679910900a3dc0b9e-0": {
+          "type": "collection",
+          "settings": {
+            "heading": "clothes",
+            "collection": "clothes"
+          }
+        }
+      },
+      "block_order": [
+        "8a094345-edad-4d3b-bbdc-959882ecae4c",
+        "21c057d7-deb0-4836-9512-4be297adcc27",
+        "template--18462990663996__f375deea-98ff-4990-a147-909ccd8be803-1679910900a3dc0b9e-0"
+      ],
+      "settings": {
+      }
+    },
+    "feeaf77a-e7c4-473f-9445-4ddf72b472f5": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "underwear",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "underwear",
+        "collection-url": "",
+        "show_number": true,
+        "products_to_show": 50,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "de4c8e6c-a65e-4a8a-94fc-bf54694fd20d": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "glasses",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "glasses",
+        "collection-url": "",
+        "show_number": true,
+        "products_to_show": 50,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "ecf2cec1-3778-4745-b7b4-70e59960a5ef": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "clothes",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "clothes",
+        "collection-url": "",
+        "show_number": true,
+        "products_to_show": 50,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "f375deea-98ff-4990-a147-909ccd8be803",
+    "feeaf77a-e7c4-473f-9445-4ddf72b472f5",
+    "de4c8e6c-a65e-4a8a-94fc-bf54694fd20d",
+    "ecf2cec1-3778-4745-b7b4-70e59960a5ef"
+  ]
+}

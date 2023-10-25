@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "35054989-9c03-43b3-9e79-77718d46a03a": {
+      "type": "custom-fullpage-scroll",
+      "blocks": {
+        "e4432e8f-874d-48d5-b24b-c6753385aa96": {
+          "type": "image",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/IMG_9138_1-min.jpg",
+            "image_block_mobile": "shopify:\/\/shop_images\/IMG_9138_1-min_9cfff158-6627-4211-bac1-dcd0f3dc3326.jpg",
+            "button_text": "Shop all",
+            "button_link": "shopify:\/\/pages\/shop",
+            "button_color": "#ffffff"
+          }
+        },
+        "template--21149516529980__35054989-9c03-43b3-9e79-77718d46a03a-video-1": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/IMG_8633.MOV",
+            "full_width": true,
+            "button_text": "Underwear",
+            "button_link": "shopify:\/\/pages\/shop",
+            "button_color": "#ffffff"
+          }
+        },
+        "template--21149516529980__35054989-9c03-43b3-9e79-77718d46a03a-image-1": {
+          "type": "image",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Group_38-min.jpg",
+            "image_block_mobile": "shopify:\/\/shop_images\/IMG_7696-min.jpg",
+            "button_text": "Bestseller",
+            "button_link": "shopify:\/\/collections\/bestseller",
+            "button_color": "#ffffff"
+          }
+        },
+        "09b4c28b-7137-4115-a81d-7ba83a9ce87b": {
+          "type": "newsletter",
+          "settings": {
+            "about_title": "about",
+            "about_link": "shopify:\/\/pages\/brands",
+            "about_text": "<p>We create comfortable underwear made from natural materials that proves the genius of every body. After all, freckles are stars, fingertips are petals, stretch marks are waves of the sea, and the body is nature.<\/p>",
+            "full_width": true,
+            "heading": "",
+            "heading_size": "h1",
+            "text": "<p>Subscribe to our Newsletter<\/p>"
+          }
+        },
+        "b1882b2b-afea-4352-a6d1-84d75d358fa6": {
+          "type": "footer",
+          "disabled": true,
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer",
+            "show_social": true,
+            "footer_heading_2": "",
+            "subtext": "<p>INFO@SOPROJECT.CO<br\/><a href=\"https:\/\/www.instagram.com\/londi.brand\/\" title=\"https:\/\/www.instagram.com\/londi.brand\/\">@LONDI<\/a><\/p>",
+            "image": "shopify:\/\/shop_images\/logo_powered_by_1.png",
+            "image_width": 185,
+            "alignment": "right",
+            "newsletter_enable": false,
+            "newsletter_heading": "Subscribe to our emails",
+            "enable_follow_on_shop": false,
+            "footer_show_social": false,
+            "enable_country_selector": true,
+            "enable_language_selector": true,
+            "payment_enable": true,
+            "show_policy": true,
+            "margin_top": 0,
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "e4432e8f-874d-48d5-b24b-c6753385aa96",
+        "template--21149516529980__35054989-9c03-43b3-9e79-77718d46a03a-video-1",
+        "template--21149516529980__35054989-9c03-43b3-9e79-77718d46a03a-image-1",
+        "09b4c28b-7137-4115-a81d-7ba83a9ce87b",
+        "b1882b2b-afea-4352-a6d1-84d75d358fa6"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "35054989-9c03-43b3-9e79-77718d46a03a"
+  ]
+}

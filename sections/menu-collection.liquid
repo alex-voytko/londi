@@ -1,0 +1,35 @@
+
+<div class="menu-collection-containers page-width">
+      {%- for link in section.settings.menu.links -%}
+{%- if link.links != blank -%}
+<ul class="collection-menu-container">
+                        {%- for childlink in link.links -%}
+                          <li class="collection-menu-navigation">
+                                      <a class="menu-element-collection" href="{{ childlink.url }}#{{ childlink.title | escape }}">
+                                        {{ childlink.title | escape }}
+                                      </a>
+                                    </li>
+                        {%- endfor -%}
+                      </ul>
+{%- endif -%}
+{%- endfor -%}    </div>                 
+
+{% schema %}
+{
+  "name": "Menu Collection",
+  "class": "section-menu-collection",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Menu Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Menu Collection"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,106 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "d2ca52c1-2dc5-4360-a4fa-ed86de6a31e2": {
+      "type": "menu-list-collection",
+      "blocks": {
+        "template--18513604280636__d2ca52c1-2dc5-4360-a4fa-ed86de6a31e2-1680081728a39484cd-0": {
+          "type": "collection",
+          "settings": {
+            "heading": "londi",
+            "collection": "londi"
+          }
+        },
+        "0486b118-1231-48f2-9bbb-add7a61d9a49": {
+          "type": "collection",
+          "settings": {
+            "heading": "vidchutia",
+            "collection": "vidchutia"
+          }
+        }
+      },
+      "block_order": [
+        "template--18513604280636__d2ca52c1-2dc5-4360-a4fa-ed86de6a31e2-1680081728a39484cd-0",
+        "0486b118-1231-48f2-9bbb-add7a61d9a49"
+      ],
+      "settings": {
+      }
+    },
+    "ecf2cec1-3778-4745-b7b4-70e59960a5ef": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "londi",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "londi",
+        "show_number": true,
+        "products_to_show": 50,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 16,
+        "color_desktop": "#ff4301",
+        "color_mobile": "#e9ff53"
+      }
+    },
+    "de4c8e6c-a65e-4a8a-94fc-bf54694fd20d": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "vidchutia",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "vidchutia",
+        "show_number": true,
+        "products_to_show": 50,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 16,
+        "color_desktop": "#e9ff53",
+        "color_mobile": "#0019ff"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d2ca52c1-2dc5-4360-a4fa-ed86de6a31e2",
+    "ecf2cec1-3778-4745-b7b4-70e59960a5ef",
+    "de4c8e6c-a65e-4a8a-94fc-bf54694fd20d"
+  ]
+}
