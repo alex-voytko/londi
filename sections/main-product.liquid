@@ -546,7 +546,7 @@ border-color: {{ block.settings.hover_border_color }};
     {%- endif -%}
   </div>
 
-  {% render 'product-media-modal' variant_images: variant_images %}
+  {% render 'product-media-modal', variant_images: variant_images %}
 
   {% assign popups = section.blocks | where: 'type', 'popup' %}
   {%- for block in popups -%}

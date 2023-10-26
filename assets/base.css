@@ -3468,9 +3468,7 @@ a.mega-menu__link.link:hover {
     padding: 48px 60px;
 }}
 #MainContent:has(.menu-collection-containers) .collection__title.title-wrapper.title-wrapper--no-top-margin.page-width {
-padding-top: 32px;
-    padding-left: 62px;
-    padding-bottom: 32px;
+    padding: 32px 16px;
 }
 .cart-notification-product__image.global-media-settings {
     height: 90px;
