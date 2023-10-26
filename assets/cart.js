@@ -115,6 +115,11 @@ class CartItems extends HTMLElement {
         if (cartFooter) cartFooter.classList.toggle('is-empty', parsedState.item_count === 0);
         if (cartDrawerWrapper) cartDrawerWrapper.classList.toggle('is-empty', parsedState.item_count === 0);
 
+        // Force Delete "You may also like"-section when there 0 cart-items
+        if (parsedState.item_count === 0) {
+          document.querySelector('div.You.may.also.like').remove();
+        }
+
         this.getSectionsToRender().forEach((section => {
           const elementToReplace =
             document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
