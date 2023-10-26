@@ -377,7 +377,6 @@
 }
 .image-with-text__content {
     padding: 48px 60px;
-    padding-bottom: 0;
 }
 tr:nth-child(1) td {
     font-size: 36px;
@@ -397,7 +396,7 @@ td>a {
     color: #060606;
 }
 #shopify-section-template--18372839014716__cd33939b-1af2-4353-b0ad-4587615d0e6b .image-with-text {
-    padding-top: 48px!important;
+    padding-top: 48px !important;
 }
 .ukstockists .header__icons, .ukstockists header-drawer, .ukstockists .header__inline-menu,
 .stockists .header__icons, .stockists header-drawer, .stockists .header__inline-menu {
@@ -405,47 +404,46 @@ td>a {
 }
 @media screen and (max-width: 990px) {
   #shopify-section-template--18372839014716__cd33939b-1af2-4353-b0ad-4587615d0e6b .image-with-text {
-    padding-top: 0px!important;
-}
+    padding-top: 0 !important;
+  }
   .image-with-text__content {
     padding: 36px 16px;
-}
+  }
   tr:nth-child(2n+2) td {
     font-size: 28px;
     font-weight: 400;
     padding: 36px 0 12px 0!important;
-}
-
+  }
   tr:nth-child(2n+3) td:nth-child(1) {
     padding-top: 11px!important;
-}
+  }
   tr:nth-child(2n+3) td:nth-child(2) {
     padding-top: 24px!important;
-}
+  }
   tr:nth-child(1) td {
     font-size: 28px;
-  line-height: 28px;
-}
-tr:nth-child(2n + 2) td {
-    font-size: 18px;
-}
-tr:nth-child(2n + 3) td {
-    font-size: 12px;
-}
+    line-height: 28px;
+  }
+  tr:nth-child(2n + 2) td {
+      font-size: 18px;
+  }
+  tr:nth-child(2n + 3) td {
+      font-size: 12px;
+  }
 }
 @media screen and (max-width: 500px) {
   tr:nth-child(2n + 3) td {
-  display: flex;
+    display: flex;
     flex-direction: column;
-}
+  }
   tr:nth-child(2n+2) td:nth-child(2) {
     display: none;
-}
+  }
   .image-with-text__text-item td {
     width: 100%!important;
     display: flex;
-}
+  }
   .image-with-text__media {
-    padding-bottom: calc(100vh - 48px)!important!important;
-}
+    padding-bottom: calc(100vh - 48px)!important;
+  }
 }
