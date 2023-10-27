@@ -7,12 +7,11 @@
       ],
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 48
       }
     },
     "cd33939b-1af2-4353-b0ad-4587615d0e6b": {
       "type": "image-with-page",
-      "disabled": true,
       "blocks": {
         "template--18372839014716__cd33939b-1af2-4353-b0ad-4587615d0e6b-page-1": {
           "type": "page",
@@ -24,6 +23,7 @@
       "block_order": [
         "template--18372839014716__cd33939b-1af2-4353-b0ad-4587615d0e6b-page-1"
       ],
+      "disabled": true,
       "custom_css": [
         ".image-with-text {padding: 0;}"
       ],

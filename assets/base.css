@@ -275,7 +275,7 @@ html.no-js .no-js-hidden {
 }
 @media screen and (min-width: 990px) {
   .page-width--narrow {
-    max-width: 1320px;
+    /*max-width: 1320px;*/
     padding: 0 16px;
   }
 
@@ -3069,9 +3069,11 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
-.card__content .h5,
-.card__content .price {
-  font-size: 12px !important;
+@media screen and (max-width: 989px) {
+  .card__content .h5,
+  .card__content .price {
+    font-size: 12px !important;
+  }
 }
 
 .collection .grid__item .card__content .h5,
@@ -3648,7 +3650,7 @@ label.quantity__label.form__label {
     display: none;
 }
 cart-items.is-empty {
-    height: 75vh;
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3805,7 +3807,7 @@ body {
 }
 a.page-sale.mega-menu__link.link, a.page-Знижки.mega-menu__link.link,
 a.lvl2-menu-drawer.page-sale, a.lvl2-menu-drawer.page-Знижки{
-    color: #ff4200;
+    color: #DC441B;
 }
 #shopify-section-template--20403359908156__16814304780e826007 {
     border-bottom: 1px solid #E7E7E7;
