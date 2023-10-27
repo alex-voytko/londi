@@ -398,8 +398,7 @@ td>a {
 #shopify-section-template--18372839014716__cd33939b-1af2-4353-b0ad-4587615d0e6b .image-with-text {
     padding-top: 48px !important;
 }
-.ukstockists .header__icons, .ukstockists header-drawer, .ukstockists .header__inline-menu,
-.stockists .header__icons, .stockists header-drawer, .stockists .header__inline-menu {
+.ukstockists .header__icons, .ukstockists header-drawer, .ukstockists .header__inline-menu {
     display: none;
 }
 @media screen and (max-width: 990px) {
