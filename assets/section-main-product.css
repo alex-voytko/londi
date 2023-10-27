@@ -297,6 +297,7 @@ fieldset.product-form__input .form__label {
 
 .product-form__submit {
   margin-bottom: 1rem;
+  font-size: 14px;
 }
 
 .no-js .product-form__submit.button--secondary {
@@ -1599,4 +1600,9 @@ a.related-product:has(.product-select-related) {
 }
 .product__info-wrapper .product-popup-modal__opener {
   padding-left: 20px;
+}
+@media screen and (max-width: 768px){
+  .product-select-related>p{
+    font-size: 8px;
+  }
 }

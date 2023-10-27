@@ -107,13 +107,17 @@ s.price-item.price-item--regular {
     color: var(--random-hover-color-aco);
 }
 .collection .card-information s.price-item.price-item--regular {
-    font-size: 12px!important;
+    font-size: 14px!important;
   color: rgba(165, 165, 165, 1);
 }
 .card__badge.bottom.left {
     display: none;
 }
 @media screen and (max-width: 750px) {
+  .collection .card-information s.price-item.price-item--regular {
+    font-size: 12px!important;
+    color: rgba(165, 165, 165, 1);
+  }
   s.price-item.price-item--regular {
     font-size: 12px!important;
 }

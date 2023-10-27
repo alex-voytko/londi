@@ -15,6 +15,10 @@ cart-items.is-empty .title-wrapper-with-link,
   display: block;
 }
 
+.is-empty .cart__empty-text{
+    font-size: 36px;
+}
+
 .cart__warnings {
   display: none;
   text-align: center;
@@ -159,6 +163,7 @@ cart-items {
   background: #060606;
   margin-top: 10px;
   text-transform: uppercase;
+    font-size: 14px;
 }
 
 textarea#Cart-note {
@@ -286,7 +291,7 @@ td.cart-item__details div>*+*, div>.h4, div>cart-remove-button .button, td.cart-
 }
 cart-note.cart__note.field label {
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
     padding-left: 4px;
     margin-top: 7px;
 }
@@ -358,4 +363,10 @@ cart-items {
 }
 p.checkout_text {
     margin-bottom: 0px;
+}
+
+@media screen and (max-width: 768px){
+    .is-empty .cart__empty-text{
+        font-size: 28px;
+    }
 }
