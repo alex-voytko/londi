@@ -3082,10 +3082,10 @@ details-disclosure > details {
   color: #060606;
 }
 .product__accordion #icon-plus {
-    fill:var(--random-color);
+    fill: #060606;
 }
 .product__accordion details[open] #icon-plus {
-    fill:var(--random-hover-color);
+    fill: #DC441B;
 }
 
 

@@ -764,6 +764,10 @@ a.product__text {
   z-index: 101;
 }
 
+svg.icon-plus {
+  transition: transform 0.3s ease-out;
+}
+
 details[open] svg.icon-plus {
     transform: rotate(45deg);
     width: 12px;
