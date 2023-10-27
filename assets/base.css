@@ -3079,7 +3079,7 @@ details-disclosure > details {
 .collection .grid__item .card__heading,
 .related-products .card__content .h5,
 .related-products .card__content .price {
-  color: #0019FF;
+  color: #060606;
 }
 .product__accordion #icon-plus {
     fill:var(--random-color);
@@ -3131,8 +3131,9 @@ details-disclosure > details {
   }
 }
 .product-form__submit {
-  background-color: white;
-  border: 1px solid #060606;
+  background: linear-gradient(90deg, rgba(6,6,6,1) 0%, rgba(6,6,6,1) 100%);
+  text-transform: uppercase;
+  color: #FBFBFB;
 }
 
 .product-media-container.media-type-image.media-fit-cover.global-media-settings.gradient {
@@ -3166,32 +3167,22 @@ details-disclosure > details {
   modal-opener.product-popup-modal__opener.no-js-hidden.quick-add-hidden {
     right: 16px !important;
   }
+  .product-form__submit:hover {
+    background: linear-gradient(90deg, rgba(6,6,6,1) 0%, rgba(156,180,196,1) 25%, rgba(220,68,27,0.7189469537815126) 55%, rgba(6,6,6,1) 100%);
+  }
 }
 
 /* Анімація для зміни кольору */
 .product-form__submit:hover {
-  animation-name: change-color;
-  animation-duration: 0.4s;
-  background-color: rgba(107, 255, 79, 1);
+  animation: flowingGradient 2s ease-out 1;
+  background: linear-gradient(90deg, rgba(6,6,6,1) 0%, rgba(156,180,196,1) 30%, rgba(220,68,27,0.9626444327731093) 68%, rgba(6,6,6,1) 99%);
 }
 
-@keyframes change-color {
-  0% {
-    background-color: rgba(255, 67, 1, 1);
-  }
-  25% {
-    background-color: rgba(255, 67, 1, 1);
-  }
-  50% {
-    background-color: rgba(0, 25, 255, 1);
-  }
-  75% {
-    background-color: rgba(233, 255, 83, 1);
-  }
-  100% {
-    background-color: rgba(107, 255, 79, 1);
-  }
+@keyframes flowingGradient {
+  0% { background-position-x: -90px }
+  100% { background-position-x: 0 }
 }
+
 h1,
 h2,
 h3,
@@ -3204,7 +3195,7 @@ div,
 ul,
 li {
   font-family: "Helvetica" !important;
-      letter-spacing: normal !important;
+  letter-spacing: normal !important;
 }
 .breadcrumb {
   font-size: 14px;
@@ -3601,9 +3592,6 @@ ul#Slider-template--18372838850876__7dd585f4-87bd-48c3-a4be-88b46b2c3900 {
 .select-items div,.select-selected {
   font-size: 12px;
 }}
-.product-form__submit {
-    text-transform: uppercase;
-}
 button.recommendation-modal__button {
     background: #000!important;
     color: #fff!important;
