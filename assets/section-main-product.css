@@ -281,12 +281,18 @@ fieldset.product-form__input .form__label {
 } */
 
 .product-form__input.product-form__input--dropdown {
-    display: flex;
-    align-items: center;
-    border: 1px solid #060606;
-    max-width: calc(100% - 135px);
+  display: flex;
+  align-items: center;
+  border: 1px solid #060606;
+  max-width: calc(100% - 103px);
   padding-left: 12px;
-      margin-bottom: 8px
+  margin-bottom: 8px
+}
+
+@media screen and (max-width: 749px) {
+  .product-form__input.product-form__input--dropdown {
+    max-width: calc(100% - 91.2px);
+  }
 }
 
 .product-form__submit {
@@ -1586,4 +1592,7 @@ table:not([class]) td, table:not([class]) th {
 }
 a.related-product:has(.product-select-related) {
     pointer-events: none;
+}
+.product__info-wrapper .product-popup-modal__opener {
+  padding-left: 20px;
 }

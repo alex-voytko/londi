@@ -3159,11 +3159,13 @@ details-disclosure > details {
   #section-template--18372839080252__related-products-padding {
     padding-top: 60px;
     padding-bottom: 0;
-}
-  modal-opener.product-popup-modal__opener.no-js-hidden.quick-add-hidden {
-    right: 16px!important;
+  }
 }
 
+@media screen and (max-width: 749px) {
+  modal-opener.product-popup-modal__opener.no-js-hidden.quick-add-hidden {
+    right: 16px !important;
+  }
 }
 
 /* Анімація для зміни кольору */
