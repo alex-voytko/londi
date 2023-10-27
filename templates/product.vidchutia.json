@@ -62,7 +62,6 @@
         },
         "b11a2b09-0c9f-49dc-bab0-97c6cc57523d": {
           "type": "quantity_selector",
-          "disabled": true,
           "settings": {
           }
         },
@@ -198,6 +197,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
+        "recommendations_instead_collection": true,
         "collection": "underwear",
         "collection-url": "",
         "show_number": false,

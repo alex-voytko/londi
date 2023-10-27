@@ -39,6 +39,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
+        "recommendations_instead_collection": false,
         "collection": "underwear",
         "collection-url": "",
         "show_number": false,
