@@ -35,14 +35,14 @@
                 {%- when 'newsletter' -%}
                 <div class="swiper-slide newsletter-fullscreen">
                   <div class="fullscreen-section">
-                    {% render 'fullpage-about_subscribe' block: block %}
+                    {% render 'fullpage-about_subscribe', block: block %}
                   </div>
                 </div>
 
                 {% when 'footer' %}
                 <div class="swiper-slide">
                   <div class="fullscreen-section">
-                    {% render 'fullpage-footer' block: block %}
+                    {% render 'fullpage-footer', block: block %}
                   </div>
                 </div>
                {%- endcase -%}

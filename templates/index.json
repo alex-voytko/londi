@@ -36,7 +36,7 @@
         "09b4c28b-7137-4115-a81d-7ba83a9ce87b": {
           "type": "newsletter",
           "settings": {
-            "about_title": "about",
+            "about_title": "",
             "about_link": "shopify:\/\/pages\/brands",
             "about_text": "<p>We create comfortable underwear made from natural materials that proves the genius of every body. After all, freckles are stars, fingertips are petals, stretch marks are waves of the sea, and the body is nature.<\/p>",
             "full_width": true,

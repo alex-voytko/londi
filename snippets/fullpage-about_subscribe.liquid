@@ -3,14 +3,14 @@
 
 <div class="newsletter fullscreen-section fullscreen-newsletter-wrapper center {% if block.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
   
-  {% if block.settings.about_title != blank  or block.settings.about_text != blank%}
+  {% if block.settings.about_text %}
     <div class="fullscreen-about-container">
-      {% if block.settings.about_title != blank %}
-          <div class="fullscreen-about-title">
-            <a href="{{ block.settings.about_link }}">
-              {{ block.settings.about_title }}
-            </a>
-          </div>
+        {% if block.settings.about_link and block.settings.about_title %}
+            <div class="fullscreen-about-title">
+              <a href="{{ block.settings.about_link }}">
+                {{ block.settings.about_title }}
+              </a>
+            </div>
         {% endif %}
         <div class="fullscreen-about-text">{{ block.settings.about_text }}</div>
     </div>
