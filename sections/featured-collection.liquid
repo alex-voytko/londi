@@ -61,7 +61,7 @@
       <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
         <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
           {%- if section.settings.title != blank -%}
-            <h2 id="title-change-color" class="title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}{% if section.settings.show_number %}<sup>{{ section.settings.collection.products_count }}</sup>{% endif %}</h2>
+            <h2 id="title-change-color" class="title {{ section.settings.heading_size }}">{{ section.settings.title | escape | capitalize }}{% if section.settings.show_number %}<sup>{{ section.settings.collection.products_count }}</sup>{% endif %}</h2>
           {%- endif -%}
 
           {%- if section.settings.description != blank

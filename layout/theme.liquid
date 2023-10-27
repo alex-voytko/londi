@@ -292,7 +292,7 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      <div style="position:absolute;"><div style="min-height: 100%;position: relative;top: 0;left: 0;width: 100%;touch-action: none;"><div id="myRectangle" class="droplet draggable drag-item block-img-1 li-image-menu" style="background:url(https://cdn.shopify.com/s/files/1/0617/7590/4934/files/water_PNG3317_1.png?v=1681767816) 0% 0% / cover;width: 52px; height: 60px;" onmousedown="dragStart(event)" onmousemove="dragMove(event)" onmouseup="dragEnd(event)">
+      <div style="{% if tempalate == 'index' %}position:absolute;{% else %}position: fixed; z-index: 1;{% endif %}"><div style="min-height: 100%;position: relative;top: 0;left: 0;width: 100%;touch-action: none;"><div id="myRectangle" class="droplet draggable drag-item block-img-1 li-image-menu" style="background:url(https://cdn.shopify.com/s/files/1/0617/7590/4934/files/water_PNG3317_1.png?v=1681767816) 0% 0% / cover;width: 52px; height: 60px;" onmousedown="dragStart(event)" onmousemove="dragMove(event)" onmouseup="dragEnd(event)">
       </div></div></div>
       {{ content_for_layout }}
     </main>
