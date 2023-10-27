@@ -245,6 +245,16 @@
           font-size: 1.6rem;
         }
       }
+
+      body{
+      display: flex !important;
+      flex-direction: column;
+      height: 100%;
+      }
+
+      #MainContent{
+      flex: auto;
+      }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}

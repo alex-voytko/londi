@@ -276,6 +276,7 @@ html.no-js .no-js-hidden {
 @media screen and (min-width: 990px) {
   .page-width--narrow {
     /*max-width: 1320px;*/
+    max-width: var(--page-width);
     padding: 0 16px;
   }
 
@@ -3219,10 +3220,10 @@ li {
 
 /* Анімація для зміни кольору */
 .header:has(.mega-menu[open]) .header__heading-link {
-  animation: change-logo 1s infinite;
+  /*animation: change-logo 1s infinite;*/
 }
 .header:has(.mega-menu[open]) img.header__heading-logo {
-  opacity: 0;
+  /*opacity: 0;*/
 }
 
 @keyframes change-logo {
