@@ -3129,7 +3129,6 @@ details-disclosure > details {
   .product__info-wrapper .product__title h1,
   .product__info-wrapper .product__title .price {
     font-size: 14px!important;
-    
   }
 }
 .product-form__submit {
@@ -3216,11 +3215,6 @@ li {
 }
 .breadcrumb span>strong {
     font-weight: 400!important;
-}
-.cart .header__icons,
-.cart header-drawer,
-.cart .header__inline-menu {
-  display: none;
 }
 
 /* Анімація для зміни кольору */
@@ -3424,12 +3418,9 @@ h2.title.h1 > sup {
     line-height: 14px !important;
     margin: 20px 0 20px!important;
   }
-
-  
   #shopify-section-template--18372839014716__main .section-template--18372839014716__main-padding .page-title {
     font-size:28px !important;
   }
-  
 }
 a.mega-menu__link.link:hover {
     text-decoration: underline!important;
@@ -3770,7 +3761,7 @@ a.lvl1-menu-drawer {
     background: #F9F9F9;
 }
 header.header.header--middle-center.header--mobile-center.page-width.header--has-menu {
-    border-bottom: 1px solid rgba(231, 231, 231, 1);
+    border-bottom: 1px solid #E7E7E7;
 }
 a.mega-menu__link.mega-menu__link--level-2.link {
     pointer-events: none;

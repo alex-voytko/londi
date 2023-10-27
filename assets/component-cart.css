@@ -121,7 +121,7 @@ cart-items {
   .cart__items {
     grid-column-start: 1;
     grid-column-end: 3;
-    padding-bottom: 4rem;
+    padding-bottom: 20px;
   }
 
   .cart__contents > * + * {
@@ -320,7 +320,6 @@ cart-note.cart__note.field label {
     border-top: 0.1rem solid rgba(var(--color-foreground),.08);
     padding: 11.4px;
     overflow: hidden;
-  margin-bottom: 16px;
 }
 .totals>*,.title-wrapper-with-link a.underlined-link {
     font-size: 14px!important;
