@@ -1517,7 +1517,7 @@ select.select__select {
 }
 label.form__label, select.select__select {
     font-size: 14px;
-    font-family: 'Helvetica';
+    font-family: 'Helvetica Now Display';
     font-weight: 400;
     color: #060606;
 }
@@ -1582,8 +1582,8 @@ table:not([class]) td, table:not([class]) th {
 }
 .product-select-related {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 6px;
+    right: 6px;
     padding: 4px;
     background: rgba(251, 251, 251, 1);
 }

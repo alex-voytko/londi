@@ -2243,7 +2243,7 @@
       "caption": "Пункти кошика",
       "remove_title": "видалити {{ title }}",
       "remove_text": "ВИДАЛИТИ",
-      "item_text": "Кількість х",
+      "item_text": "Кількість",
       "subtotal": "РАЗОМ",
       "new_subtotal": "Новий проміжний підсумок",
       "note": "Ваш коментар",

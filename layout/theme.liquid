@@ -246,7 +246,7 @@
         }
       }
 
-      body{
+      body.cart{
       display: flex !important;
       flex-direction: column;
       height: 100%;
@@ -256,6 +256,15 @@
       flex: auto;
       }
     {% endstyle %}
+
+    <style>
+        @font-face {
+          font-family: "Helvetica Now Display";
+          src: url("https://cdn.shopify.com/s/files/1/0737/3235/8460/files/HelveticaNowDisplay-Regular.woff?v=1698422819") format("woff");
+          font-weight: 400;
+          font-style: normal;
+        }
+    </style>
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
 

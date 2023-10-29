@@ -3213,7 +3213,7 @@ a,
 div,
 ul,
 li {
-  font-family: "Helvetica" !important;
+  font-family: "Helvetica Now Display" !important;
   letter-spacing: normal !important;
 }
 .breadcrumb {
@@ -3419,7 +3419,7 @@ h2.title.h1 > sup {
   margin-bottom: 36px !important;
 }
 #shopify-section-template--18372839014716__main .section-template--18372839014716__main-padding .rte div .this-doc {
-    font-family: 'Helvetica' !important;
+    font-family: 'Helvetica Now Display' !important;
   }
 #shopify-section-template--18372839014716__main .section-template--18372839014716__main-padding .rte .policy-wrapper {
   color: #000000 !important;
@@ -3472,6 +3472,7 @@ a.mega-menu__link.link:hover {
 .cart-notification-product__image.global-media-settings {
     height: 90px;
     background: rgba(210,221,227,1);
+  background: #EFEFEF;
     align-items: center;
 }
 @media screen and (max-width: 500px){
@@ -3680,6 +3681,18 @@ cart-items.is-empty {
 a.related-product {
     max-width: 164px;
 }
+.related-product {
+  display: inline-block;
+  width: calc(25% - 0.8rem) !important;
+  margin: 0 0.8rem 0.8rem 0 !important;
+}
+@media screen and (max-width: 768px){
+  .related-product {
+    width: calc(25% - 0.6rem) !important;
+    margin: 0 0.6rem 0.6rem 0 !important;
+  }
+}
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
 select:focus, textarea:focus, input:focus {
         font-size: 16px;
@@ -3731,6 +3744,7 @@ div#cart-notification svg.icon.icon-close {
 }
 img.cart-item__image, .cart-notification-product__image.global-media-settings>img {
     background: rgba(210, 221, 227, 1);
+  background:#EFEFEF;
 }
 @media screen and (max-width: 750px){
 .center.collection__view-all>a.button {
@@ -3837,6 +3851,9 @@ button.product-popup-modal__button {
 .template-search__header.page-width h1.h2.center {
     text-align: left;
   font-size: 28px !important;
+}
+.template-search__header p {
+  font-size: 14px;
 }
 
 @media screen and (max-width: 768px) {
